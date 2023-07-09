@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Saeed Portfolio</title>
+    <script src="https://kit.fontawesome.com/8cbb816379.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Screenshot (196).png" alt="Logo" class="logo">
+                <ul id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Back-End Developer</p>
+                <h1>Hi, I'M <span>Saeed</span> <br>From Palestine</h1>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- About -->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm saeed sabra a computer system engineering student in my last year at Palestine technical
+                        university kadoorie.
+                        I'm a Backend And Flutter developer from Palestine with experience One year </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Back-End Development</span><br> Building Back-End using Nodejs</li>
+                            <li><span>App Development</span><br> Building mobile Apps using Flutter</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> 2023 – 2023</span><br>Node.js/Express.js BootCamp at GazaSkyGeeks</li>
+                            <li><span>Jan 2023 – Apr 2023</span><br>Flutter internship at GDSC</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Sep 2019 – present Tulkarem, Palestine</span><br> Bachelor's degree in Computer
+                                System Engineering</li>
+                            <li><span>2018 – 2019 Salfit,Palestine</span><br> Tawjihi (Industrial branch), My Average
+                                90.6%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- End of about section --->
+    <!--- Services --->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Back-End Development</h2>
+                    <p>develop a Back-End using JavaScript language and Nodejs, Expressjs frameworks. <br> back-end
+                        development using Node.js provides developers with a versatile and efficient platform for
+                        building high-performance web applications. Its event-driven architecture, extensive module
+                        ecosystem, and support for real-time communication </p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Development</h2>
+                    <p>develop a mobile app using language Dart and flutter framework</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- End of Services section --->
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/work-1.png">
+                    <div class="layer">
+                        <h3>To-Do App</h3>
+                        <p>a Todo app using Node.js and Express.js and MySQL for database Management and use Postman to
+                            test the HTTP endpoints. and Prisma.js ORM which features solid transaction support,
+                            relations, eager and lazy loading, read replication, and more.</p>
+                        <a href="https://github.com/Saeed-Sabra/note_app_flutter.git"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Source Code</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-2.png">
+                    <div class="layer">
+                        <h3>weather App</h3>
+                        <p> a Weather app using Node.js and Express.js, and in this app, I use two API the first one
+                            is Mapbox-geocoding to convert the entered address into (Latitude, Longitude) to use it in
+                            the second API weatherstack where this API return the weather information, and for the
+                            Front-End I use HBS package.</p>
+                        <a href="https://github.com/Saeed-Sabra/Weather-App-NodeJs.git"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Source Code</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-3.png">
+                    <div class="layer">
+                        <h3>Notaty App</h3>
+                        <p>Flutter project note app where the user can add notes with priority the app connected with
+                            Firebase to store the notes.</p>
+                        <a href="https://github.com/Saeed-Sabra/note_app_flutter.git"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
