@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Saeed Portfolio</title>
     <script src="https://kit.fontawesome.com/8cbb816379.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Header -->
-    <div class="header">
+    <div id="header">
         <div class="container">
             <nav>
                 <img src="Images/Screenshot (196).png" alt="Logo" class="logo">
-                <ul id="menu">
+                <ul id="sidemenu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
+
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Back-End Developer</p>
@@ -35,13 +40,14 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="Images/user.jpeg">
+                    <img src="Images/user1.jpg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I'm saeed sabra a computer system engineering student in my last year at Palestine technical
-                        university kadoorie.
-                        I'm a Backend And Flutter developer from Palestine with experience One year </p>
+                    <p class="about-me">I'm saeed sabra a computer system engineering student in my last year at
+                        Palestine technical
+                        university kadoorie. I'm a Backend And Flutter developer from Palestine with experience One
+                        year. </p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
@@ -163,13 +169,13 @@
                     <a href="Images/Saeed CV.pdf" class="btn btn2" download>Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
-
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -181,6 +187,34 @@
 
 
     <script src="index.js"></script>
+    <script>
+
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbzxUZ9-2qviBi-jCt7bDCAkStOaEQKbfM3bnjZQcBASozizvZdRRMt6LWtXavFwL1ce/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const msg = document.getElementById('msg')
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => {
+                    msg.innerHTML = "Message sent Successfully"
+
+                    setTimeout(() => {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch((error) => {
+                    msg.innerHTML = "Something went wrong!"
+
+                    setTimeout(() => {
+                        msg.innerHTML = ""
+                    }, 5000)
+                });
+        });
+
+    </script>
 </body>
 
 </html>

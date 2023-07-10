@@ -11,17 +11,19 @@ body {
     color: #fff;
 }
 
-.header {
+#header {
     width: 100%;
     height: 100vh;
-    background-image: url(Images/background.png);
+    background-image: url(Images/backgroun.png);
     background-size: cover;
     background-position: center;
+    /* background-attachment: fixed; */
 }
 
 .container {
     padding: 10px 10%;
 }
+
 
 nav {
     display: flex;
@@ -105,7 +107,11 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
+}
 
+.about-me {
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .sub-title {
@@ -150,12 +156,12 @@ nav ul li a:hover::after {
 .tab-contents ul li {
     list-style: none;
     margin: 30px 0;
-
+    font-size: 20px;
 }
 
 .tab-contents ul li span {
     color: rgba(255, 0, 0, 0.678);
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .tab-contents {
@@ -294,64 +300,6 @@ nav ul li a:hover::after {
     background: red;
 }
 
-
-
-
-
-
-
-/* .contact .container .info {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-}
-
-.contact .container .info .label {
-    font-size: 42px;
-    letter-spacing: -2px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-
-
-.contact .container .info .link {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 32px;
-    display: block;
-    color: red;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-
-
-.contact .container .info .social {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.contact .container .info .social p {
-     margin: 0; 
-    font-size: 25px;
-    display: block;
-}
-
-
-.contact .container .info .social a {
-    margin-left: 10px;
-    color: #fff;
-    transition: 0.5s;
-    font-size: 25px;
-}
-
-.contact .container .info .social a:hover{
-    color: red;
-} */
-
-
 .contact-left {
     flex-basis: 35%;
 }
@@ -430,4 +378,88 @@ form .btn2 {
 
 .copyright span {
     color: red;
+}
+
+/* -----------------css for small screen------------------- */
+
+nav .fa-solid {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #header {
+        background-image: url(Images/phone-backgroun.png);
+    }
+
+    .header-text {
+        margin-top: 70%;
+        font-size: 18px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #262626;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{font-size: 14px;}
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
 }
