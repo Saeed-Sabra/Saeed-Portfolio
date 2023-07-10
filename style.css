@@ -215,7 +215,7 @@ nav ul li a:hover::after {
 
 }
 
-.work{
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -223,6 +223,211 @@ nav ul li a:hover::after {
 }
 
 .work img {
-    width : 100%;
+    width: 100%;
     border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, .6), red);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid red;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+
+.btn:hover {
+    background: red;
+}
+
+
+
+
+
+
+
+/* .contact .container .info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .container .info .label {
+    font-size: 42px;
+    letter-spacing: -2px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+.contact .container .info .link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 32px;
+    display: block;
+    color: red;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+
+.contact .container .info .social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.contact .container .info .social p {
+     margin: 0; 
+    font-size: 25px;
+    display: block;
+}
+
+
+.contact .container .info .social a {
+    margin-left: 10px;
+    color: #fff;
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+.contact .container .info .social a:hover{
+    color: red;
+} */
+
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+
+}
+
+.contact-left p i {
+    color: red;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: red;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: red;
+}
+
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright span {
+    color: red;
 }
